@@ -1,0 +1,60 @@
+import java.util.ArrayList;
+import java.util.Date;
+
+public class ContainerParty {
+    private Date date;
+    private ArrayList<Person> persons;
+    private ArrayList<Container> containers;
+    private String address;
+ 
+    public ContainerParty(Date date, ArrayList<Person> persons,
+            ArrayList<Container> containers, String address) {
+        this.date = date;
+        this.persons = persons;
+        this.containers = containers;
+        this.address = address;
+    }
+ 
+    public Date getDate() {
+        return date;
+    }
+ 
+    public void setDate(Date date) {
+        this.date = date;
+    }
+ 
+    public ArrayList<Person> getPersons() {
+        return persons;
+    }
+ 
+    public void setPersons(ArrayList<Person> persons) {
+        this.persons = persons;
+    }
+
+    public ArrayList<Container> getContainers() {
+        return containers;
+    }
+ 
+    public void setContainers(ArrayList<Container> containers) {
+        this.containers = containers;
+    }
+ 
+    public String getAddress() {
+        return address;
+    }
+
+    public void setAddress(String address) {
+        this.address = address;
+    }
+
+    @Override
+    public String toString() {
+        for(int i=0;i<containers.size();i++)
+        {
+            containers.get(i).getInfo();
+        }
+        return "ContainerParty Date:" + date + "\nPersons:" + persons + "\nAddress:" + address;
+    }
+ 
+ }
+
