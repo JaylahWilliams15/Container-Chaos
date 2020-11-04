@@ -1,0 +1,31 @@
+import java.util.ArrayList;
+import java.util.Date;
+
+public class ContainerMadnessAssignment {
+
+   public static void main(String[] args) {
+  
+       ArrayList<Container> arl=new ArrayList<Container>();
+       arl.add(new CircularContainer("Pyrex",4.1, "Green",5.3));
+       arl.add(new RectangularContainer("Glade",6.7, "Orange",5,7));
+
+       ArrayList<Person> persons=new ArrayList<Person>();
+       persons.add(new Person("Jaylah Williams", 11, 34));
+       persons.add(new Person("Lisa Greely", 18, 32));
+      
+       ContainerParty cp=new ContainerParty(new Date(), persons,arl,"252 GameDay Drive State College PA, 16802");
+       System.out.println(cp);
+      
+System.out.println("-------------------");
+       ArrayList<Container> arl2=new ArrayList<Container>();
+       arl2.add(new CircularContainer("Rubbermaid",5.1, "Purple",6.2));
+       arl2.add(new RectangularContainer("Tupperware",8.1, "Blue",3,4));
+       ArrayList<Person> persons1=new ArrayList<Person>();
+       persons1.add(new Person("Sarah Dhana", 22, 51));
+       persons1.add(new Person("Audrey Simples", 18, 55));
+      
+       ContainerParty cp1=new ContainerParty(new Date(), persons1,arl2,"42 Whiteout Way State College PA, 16802");
+       System.out.println(cp1);
+   }
+
+}
